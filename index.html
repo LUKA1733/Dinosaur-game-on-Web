@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>恐龙吃恐龙</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="game" width="1280" height="720"></canvas>
+
+  <div id="hud" hidden>
+    <div class="hud-card">
+      <div>分数 <b id="hud-score">0</b></div>
+      <div>当前 <b id="hud-species">美颌龙</b></div>
+    </div>
+    <div class="hud-card">最高分 <b id="hud-best">0</b></div>
+  </div>
+
+  <div id="banner" hidden>进化成了迅猛龙</div>
+
+  <section id="screen-start" class="screen">
+    <div class="panel">
+      <p class="eyebrow">史前大胃王</p>
+      <h1>恐龙吃恐龙</h1>
+      <p class="lede">从小小的美颌龙出发，吃掉更小的恐龙，一路长成霸王龙。</p>
+      <ul class="controls">
+        <li>移动鼠标，恐龙朝光标走</li>
+        <li>按住方向键或 W A S D 时，改用键盘转向</li>
+        <li>比你小就能吃，一样大就轻轻分开，比你大就会吃掉你</li>
+      </ul>
+      <p class="prompt">按空格或点击开始</p>
+    </div>
+  </section>
+
+  <section id="screen-over" class="screen" hidden>
+    <div class="panel">
+      <h2>游戏结束</h2>
+      <p class="lede">你被更大的恐龙吃掉了</p>
+      <p class="score-line">本局分数 <strong id="over-score">0</strong></p>
+      <p class="score-line">最高分 <strong id="over-best">0</strong></p>
+      <button id="btn-again" type="button">再来一局</button>
+      <p class="hint">按空格再来一局</p>
+    </div>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
